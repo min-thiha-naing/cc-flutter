@@ -19,4 +19,10 @@ class SubmissionApiController extends Controller
         $file = Submission::create($request->all());
         return response()->json($file);
     }
+
+    public function storeSubmission(Request $request)
+    {
+        $submission = Submission::create($request->all());
+        return response()->json($submission);
+    }
 }
